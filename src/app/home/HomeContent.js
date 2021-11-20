@@ -26,7 +26,7 @@ export default class HomeContent extends React.Component {
     render() {
         return (
             <Drawer.Navigator>
-              <Drawer.Screen name="HomeContent" component={List} options={{title: 'اردو ناول اور افسانے'}}/>
+              <Drawer.Screen name="HomeContent" component={List} options={{title: 'اردو ناول اور افسانے', headerTitleAlign: 'center'}}/>
             </Drawer.Navigator>
           );
     }

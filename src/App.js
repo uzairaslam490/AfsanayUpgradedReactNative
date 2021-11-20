@@ -7,6 +7,8 @@ import Novel from './app/novel/index';
 import 'react-native-gesture-handler';
 import { Provider } from 'react-redux';
 import store from './store';
+import { parseAsync } from '@babel/core';
+import { TabRouter } from 'react-navigation';
 const { Screen, Navigator } = createNativeStackNavigator();
 
 export default function App() {
@@ -15,7 +17,7 @@ export default function App() {
       <NavigationContainer>
           <Navigator>
               <Screen name="Home" options={{headerShown: false}} component={Home}/>
-              <Screen name="Novel" component={Novel} />
+              <Screen name="Novel" options={{headerTitleAlign: 'center'}} component={Novel} />
           </Navigator>
       </NavigationContainer>
     </Provider>
