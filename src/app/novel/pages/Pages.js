@@ -1,29 +1,94 @@
 /* eslint-disable prettier/prettier */
-import * as React from 'react';
-import {View, Text} from 'react-native';
-import Icon from 'react-native-vector-icons/Ionicons';
+/* eslint-disable react-native/no-inline-styles */
+import React, { Component } from 'react';
+import {
+  View,
+  Text,
+  StyleSheet,
+  ScrollView,
+  TouchableOpacity,
+} from 'react-native';
+import Icon from 'react-native-vector-icons/MaterialIcons';
+import PageButton from './partials/PageButton';
+import { COLOR_PRIMARY } from '../../colors';
 
-export default class Pages extends React.Component {
-  constructor(props) {
+export default class Page extends Component {
+  constructor(props){
     super(props);
-    this.props.navigation;
+    this.goToPage = this.goToPage.bind(this);
+  }
+  goToPage(page){
+    let { getNovelPage, no, navigation } = this.props;
+    let {novel} = this.props.params;
+    if (no !== page){
+      getNovelPage(novel.id, page);
+    }
+    navigation.navigate('PageRoot');
   }
   render() {
-    // const {navigation} = this.props;
-    //   if (navigation.isFocused()){
-    //   navigation.setOptions({tabBarIcon:() => {
-    //     return <Icon name="book" size={25}/>;
-    //   }});}
-    //   else {
-    //     navigation.setOptions({tabBarIcon:() => {
-    //       return <Icon name="book-outline" size={25}/>;
-    //     }});
-    //   }
+    let { isFetching, error, no, novel } = this.props;
     return (
-      // eslint-disable-next-line react-native/no-inline-styles
-      <View style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>
-        <Text>How are you doing today ?</Text>
+      <View style={styles.mainContainer}>
+        <ScrollView>
+          <View style={{ flexDirection: 'column', margin: 5, backgroundColor: '#fff' }}>
+            {(() => {
+              let pages = [];
+              for (let i = 1; i <= novel.totalPages; i++){
+                pages.push((
+                  <PageButton
+                    key={i}
+                    activePage={no}
+                    page={i}
+                    goToPage={this.goToPage}
+                    />
+                ));
+              }
+              return pages;
+            })()}
+          </View>
+        </ScrollView>
       </View>
     );
   }
 }
+
+const styles = StyleSheet.create({
+  mainContainer: {
+    flex: 1,
+    flexDirection: 'column',
+  },
+  controlsContainer: {
+    backgroundColor: COLOR_PRIMARY,
+    flexDirection: 'row',
+    elevation: 10,
+    padding: 6,
+  },
+  control: {
+    flex: 1,
+    padding: 8,
+    margin: 3,
+    backgroundColor: '#FFFFFF',
+    borderRadius: 5,
+  },
+  controlText: {
+    textAlign: 'center',
+    color: COLOR_PRIMARY,
+    fontSize: 16,
+  },
+  container: {
+    flex: 1,
+    margin: 10,
+    backgroundColor: '#FFFFFF',
+    padding: 10,
+    elevation: 5,
+    borderRadius: 6,
+  },
+  loading: {
+    textAlign: 'center',
+  },
+  text: {
+    fontFamily: 'NotoNaskhArabic-Regular',
+    fontSize: 22,
+  },
+});
+

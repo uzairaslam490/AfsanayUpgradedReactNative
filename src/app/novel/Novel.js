@@ -55,12 +55,15 @@ export default class Novel extends React.Component {
     const Page = (props) => {
       return <PageRoot params={params} {...props} />;
     };
+    const Pages = (props) => {
+      return <PagesRoot params={params} {...props} />;
+    };
     return (
       <TabView.Navigator screenOptions={{headerShown: false}}>
         <TabView.Screen name="SettingsRoot" component={SettingsRoot}  options = {{ title: 'کنٹرول', tabBarIcon:(tintColor) => {
           return <Icon name="settings-outline" color={tintColor} size={25}/>;
         }}} />
-        <TabView.Screen name="PagesRoot" component ={PagesRoot} options={{title: 'صفحات', tabBarIcon:(tintColor) => {
+        <TabView.Screen name="PagesRoot" component ={Pages} options={{title: 'صفحات', tabBarIcon:(tintColor) => {
           return <Icon name="book-outline" color={tintColor} size={25}/>;
         },
         }}/>
