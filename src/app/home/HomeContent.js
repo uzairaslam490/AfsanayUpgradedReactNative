@@ -27,7 +27,7 @@ export default class HomeContent extends React.Component {
     render() {
         return (
             <Drawer.Navigator>
-              <Drawer.Screen name="HomeContent" component={List} options={{title: 'اردو ناول اور افسانے', headerTitleAlign: 'center', headerTitleStyle: {fontFamily: 'Alvi-Nastaleeq-Regular', fontSize: 28}, 
+              <Drawer.Screen name="HomeContent" component={List} options={{title: 'اردو ناول اور افسانے', headerTitleAlign: 'center', headerTitleStyle: {fontFamily: 'Alvi-Nastaleeq-Regular', fontSize: 28},
               drawerLabel: 'Home', drawerIcon:(tintColor) => {
               return <Icon name="home" color={tintColor} size={20}/>;}}}/>
             </Drawer.Navigator>

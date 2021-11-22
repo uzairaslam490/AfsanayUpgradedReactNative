@@ -2,7 +2,7 @@
 import { connect } from 'react-redux';
 import Pages from './Pages';
 import {
-  getNovelPage,
+  getNovelPage,setNovelPage,
 } from '../page/actions';
 
 const mapStateToProps = (store) => {
@@ -10,12 +10,14 @@ const mapStateToProps = (store) => {
     no: store.page.no,
     isFetching: store.page.isFetching,
     novel: store.novel.novel,
+    totalPages: store.novel.totalPages,
   };
 };
 
 const mapDispatchToProps = (dispatch) => {
   return {
     getNovelPage: (id, page, reset = false) => dispatch(getNovelPage(id, page, reset)),
+    setNovelPage: (params) => dispatch(setNovelPage(params)),
   };
 };
 

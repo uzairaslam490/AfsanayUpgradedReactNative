@@ -20,7 +20,12 @@ export default class Page extends Component {
     this.fontFamilyChanged = this.fontFamilyChanged.bind(this);
   }
   componentDidMount(){
-
+    let{navigation} = this.props;
+    navigation.setOptions({
+      title: 'کنٹرول',
+      headerTitleStyle: { fontFamily: 'Alvi-Nastaleeq-Regular', fontSize: 28},
+      headerTitleAlign: 'center',
+    });
   }
   fontChanged(val){
     let { setNovel } = this.props;

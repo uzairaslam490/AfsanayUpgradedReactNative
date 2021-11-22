@@ -67,13 +67,6 @@ export default class Page extends React.Component {
     //       return <Icon name="reader-outline" size={25}/>;
     //     }});
     //   }
-    const page = () =>{
-      if (isFetching){
-        return <Loading />;
-      } else {
-        return <Text style={[styles.text, { fontSize: fontSize, fontFamily: fontFamily }]}>{`${text}`}</Text>
-      }
-    };
     return (
       // eslint-disable-next-line react-native/no-inline-styles
         <View style={styles.mainContainer}>
