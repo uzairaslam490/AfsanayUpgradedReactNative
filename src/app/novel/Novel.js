@@ -51,6 +51,7 @@ export default class Novel extends React.Component {
     const {params} = this.props.route;
     navigation.setOptions({
       title: params.novel.urdu_name,
+      headerTitleStyle: {fontFamily: 'Alvi-Nastaleeq-Regular', fontSize: 28},
     });
     const Page = (props) => {
       return <PageRoot params={params} {...props} />;
