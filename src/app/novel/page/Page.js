@@ -1,7 +1,7 @@
 /* eslint-disable prettier/prettier */
 import * as React from 'react';
 import {View, Text, StyleSheet, ScrollView, TouchableOpacity} from 'react-native';
-import { COLOR_PRIMARY } from '../../colors';
+import { COLOR_PRIMARY, COLOR_FACEBOOK_GREY_90 } from '../../colors';
 import Loading from '../../common/loading';
 import Icon  from 'react-native-vector-icons/Ionicons';
 
@@ -114,7 +114,7 @@ const styles = StyleSheet.create({
     flexDirection: 'column',
   },
   controlsContainer: {
-    backgroundColor: COLOR_PRIMARY,
+    backgroundColor: COLOR_FACEBOOK_GREY_90,
     flexDirection: 'row',
     elevation: 10,
     padding: 6,

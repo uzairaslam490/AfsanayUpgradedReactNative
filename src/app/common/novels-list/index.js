@@ -8,6 +8,7 @@ const mapStateToProps = (store) => {
     novel: store.novel.novel,
     isFetching: store.novel.isFetching,
     error: store.novel.error,
+    fontFamily: store.novel.fontFamily,
   };
 };
 

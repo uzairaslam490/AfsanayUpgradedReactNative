@@ -12,6 +12,43 @@
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
+		862C77743D274530871958CC /* Nafees.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 121E09C24EBD466DA4284FFA /* Nafees.ttf */; };
+		CA6E53DE2FA348859F6D48C0 /* NotoNaskhArabic-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 56F1053382A04ADBB5248498 /* NotoNaskhArabic-Bold.ttf */; };
+		362C68D84E1648D0963C049B /* NotoNaskhArabic-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F831D8B6B882426F9A49AA11 /* NotoNaskhArabic-Regular.ttf */; };
+		CACD7967A66244888DB7945D /* AntDesign.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 851D41CE94034DE897677283 /* AntDesign.ttf */; };
+		8FD95D1D463F4A30A7182D78 /* Entypo.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7C97ED2E6F7849C581865889 /* Entypo.ttf */; };
+		69FDA0E9FDF746C5BF4B4D54 /* EvilIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EB9DEB0B91414BEA99948C5C /* EvilIcons.ttf */; };
+		A265C1B2ECC4443E84E5098A /* Feather.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F8A36D07154E4B719F0128F6 /* Feather.ttf */; };
+		1368230F5DA04205A950BD85 /* FontAwesome.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 066AA7A55EEE472C91E60736 /* FontAwesome.ttf */; };
+		3C62D180D05547DFA2AA12AE /* FontAwesome5_Brands.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4D11D434FF6941A09DD4C64C /* FontAwesome5_Brands.ttf */; };
+		C880DD23E029404E8D522FC7 /* FontAwesome5_Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E6052AAF6D624AEFA3FB5BDE /* FontAwesome5_Regular.ttf */; };
+		6F42A9E0FA6E4A42938E90B0 /* FontAwesome5_Solid.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 02DFA8ACC2F34988B5326652 /* FontAwesome5_Solid.ttf */; };
+		3FCB8ACC22DF4E5D966D89CE /* Fontisto.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 396AAAAF1AD24C569D899048 /* Fontisto.ttf */; };
+		8CC2395981E546D49DE735AC /* Foundation.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C7719860971F4C1DAC68D9C6 /* Foundation.ttf */; };
+		35D6326079844570997BD64C /* Ionicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AA81BE741FCA4233AC9E039E /* Ionicons.ttf */; };
+		F94C8B3F4907468AB5827672 /* MaterialCommunityIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C8B48FF2AA2D4B25BE8ECED7 /* MaterialCommunityIcons.ttf */; };
+		9945484EFB2846F3BD4E5DF2 /* MaterialIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C61E412277AB43E4BEBF6318 /* MaterialIcons.ttf */; };
+		C9BE1C50EEB84CE5976141AC /* Octicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F1FAF76139D642F791FE0F93 /* Octicons.ttf */; };
+		F39EEC6235BE4BCDADBB70C9 /* SimpleLineIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AA1AF5F917F14D75B0F90A32 /* SimpleLineIcons.ttf */; };
+		1C01F557655E4B749348C6E3 /* Zocial.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F008CDECD4FE43ADAACA44A7 /* Zocial.ttf */; };
+		1CF5C7DCDFFF437787139139 /* AlviNastaleeqRegular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0909B4F469E3464B91F16DC7 /* AlviNastaleeqRegular.ttf */; };
+		9B382EF6841B47CE96518BF1 /* JameelNooriNastaleeqKasheeda.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4C6E2D22D10E458AA05240BC /* JameelNooriNastaleeqKasheeda.ttf */; };
+		D79A95E082BF487A97C2FAE7 /* AlQalamShekastahRegular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 289C5C03185F45EF99017B5E /* AlQalamShekastahRegular.ttf */; };
+		EFA923C6DA9D4C56984FCCA5 /* AlQalam-Shekastah-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E6DD7FDBA2814F6092545191 /* AlQalam-Shekastah-Regular.ttf */; };
+		B07368209CC64D40BBC7CD66 /* AlQalam-Taj-Nastaleeq-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4DC4C4C73FAA4CBC96CA9DD2 /* AlQalam-Taj-Nastaleeq-Regular.ttf */; };
+		C0C9D3085A6F4BB4BB325BCD /* Alvi-Nastaleeq-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3727A645C21C4A38A5308CE2 /* Alvi-Nastaleeq-Regular.ttf */; };
+		BB01A496C0EB46C9BC5EFE13 /* Jameel-Noori-Nastaleeq-Kasheeda.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F696B6D63F9D47469A8DAA61 /* Jameel-Noori-Nastaleeq-Kasheeda.ttf */; };
+		597997882916493FAE28D6BD /* AlQalam-Ubaid-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0F547CDF3A9E4A148CE3C218 /* AlQalam-Ubaid-Regular.ttf */; };
+		085C3A3583F64CEFB7AF81CA /* Alvi-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 08C1122A1BE04B72AD8E3C49 /* Alvi-Regular.ttf */; };
+		3B027C222AC34B8182FC9A87 /* Attari-Quran-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 20929910CBED4C31A141C839 /* Attari-Quran-Regular.ttf */; };
+		3AD814A523074BBD95F42E5A /* PDMS-Bukhari-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 361780040C8041569BC4FD12 /* PDMS-Bukhari-Regular.ttf */; };
+		16490D1C523D4F658AD3F66C /* PDMS-Jauhar-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D6DDB12230774621B1904BAE /* PDMS-Jauhar-Regular.ttf */; };
+		49F34E3825CF4FD1AF0BD430 /* PDMS-Penci-Nafees-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3A6C287DDAF945C4B0F48BBE /* PDMS-Penci-Nafees-Regular.ttf */; };
+		41BD5910D5A343549E39A828 /* PDMS-Saleem-QuranFont-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 456095A688CB4F509112F2FE /* PDMS-Saleem-QuranFont-Regular.ttf */; };
+		E110E1620EBE43E7A6C916E2 /* Rouqa-Unicode-Rouqa-Unicode.ttf in Resources */ = {isa = PBXBuildFile; fileRef = ADC0C37D26E549E586909FBA /* Rouqa-Unicode-Rouqa-Unicode.ttf */; };
+		DC2EDB62444E4F64984432E3 /* Sulus-Unicode-Sulus-Unicode.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A072D925C6704B89810A725B /* Sulus-Unicode-Sulus-Unicode.ttf */; };
+		451E35FEF0024F00A369B991 /* Tehreer-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EC319794918D451692BB01EE /* Tehreer-Regular.ttf */; };
+		897646D4F2BD4D7EBD89BB85 /* UL-Sajid-Heading-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C188466CE8C04F2D9A2E2584 /* UL-Sajid-Heading-Regular.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +73,43 @@
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = afsanayUpgradedApp/main.m; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = afsanayUpgradedApp/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
+		121E09C24EBD466DA4284FFA /* Nafees.ttf */ = {isa = PBXFileReference; name = "Nafees.ttf"; path = "../src/assets/fonts/Nafees.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		56F1053382A04ADBB5248498 /* NotoNaskhArabic-Bold.ttf */ = {isa = PBXFileReference; name = "NotoNaskhArabic-Bold.ttf"; path = "../src/assets/fonts/NotoNaskhArabic-Bold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		F831D8B6B882426F9A49AA11 /* NotoNaskhArabic-Regular.ttf */ = {isa = PBXFileReference; name = "NotoNaskhArabic-Regular.ttf"; path = "../src/assets/fonts/NotoNaskhArabic-Regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		851D41CE94034DE897677283 /* AntDesign.ttf */ = {isa = PBXFileReference; name = "AntDesign.ttf"; path = "../node_modules/react-native-vector-icons/Fonts/AntDesign.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		7C97ED2E6F7849C581865889 /* Entypo.ttf */ = {isa = PBXFileReference; name = "Entypo.ttf"; path = "../node_modules/react-native-vector-icons/Fonts/Entypo.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		EB9DEB0B91414BEA99948C5C /* EvilIcons.ttf */ = {isa = PBXFileReference; name = "EvilIcons.ttf"; path = "../node_modules/react-native-vector-icons/Fonts/EvilIcons.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		F8A36D07154E4B719F0128F6 /* Feather.ttf */ = {isa = PBXFileReference; name = "Feather.ttf"; path = "../node_modules/react-native-vector-icons/Fonts/Feather.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		066AA7A55EEE472C91E60736 /* FontAwesome.ttf */ = {isa = PBXFileReference; name = "FontAwesome.ttf"; path = "../node_modules/react-native-vector-icons/Fonts/FontAwesome.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		4D11D434FF6941A09DD4C64C /* FontAwesome5_Brands.ttf */ = {isa = PBXFileReference; name = "FontAwesome5_Brands.ttf"; path = "../node_modules/react-native-vector-icons/Fonts/FontAwesome5_Brands.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		E6052AAF6D624AEFA3FB5BDE /* FontAwesome5_Regular.ttf */ = {isa = PBXFileReference; name = "FontAwesome5_Regular.ttf"; path = "../node_modules/react-native-vector-icons/Fonts/FontAwesome5_Regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		02DFA8ACC2F34988B5326652 /* FontAwesome5_Solid.ttf */ = {isa = PBXFileReference; name = "FontAwesome5_Solid.ttf"; path = "../node_modules/react-native-vector-icons/Fonts/FontAwesome5_Solid.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		396AAAAF1AD24C569D899048 /* Fontisto.ttf */ = {isa = PBXFileReference; name = "Fontisto.ttf"; path = "../node_modules/react-native-vector-icons/Fonts/Fontisto.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		C7719860971F4C1DAC68D9C6 /* Foundation.ttf */ = {isa = PBXFileReference; name = "Foundation.ttf"; path = "../node_modules/react-native-vector-icons/Fonts/Foundation.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		AA81BE741FCA4233AC9E039E /* Ionicons.ttf */ = {isa = PBXFileReference; name = "Ionicons.ttf"; path = "../node_modules/react-native-vector-icons/Fonts/Ionicons.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		C8B48FF2AA2D4B25BE8ECED7 /* MaterialCommunityIcons.ttf */ = {isa = PBXFileReference; name = "MaterialCommunityIcons.ttf"; path = "../node_modules/react-native-vector-icons/Fonts/MaterialCommunityIcons.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		C61E412277AB43E4BEBF6318 /* MaterialIcons.ttf */ = {isa = PBXFileReference; name = "MaterialIcons.ttf"; path = "../node_modules/react-native-vector-icons/Fonts/MaterialIcons.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		F1FAF76139D642F791FE0F93 /* Octicons.ttf */ = {isa = PBXFileReference; name = "Octicons.ttf"; path = "../node_modules/react-native-vector-icons/Fonts/Octicons.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		AA1AF5F917F14D75B0F90A32 /* SimpleLineIcons.ttf */ = {isa = PBXFileReference; name = "SimpleLineIcons.ttf"; path = "../node_modules/react-native-vector-icons/Fonts/SimpleLineIcons.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		F008CDECD4FE43ADAACA44A7 /* Zocial.ttf */ = {isa = PBXFileReference; name = "Zocial.ttf"; path = "../node_modules/react-native-vector-icons/Fonts/Zocial.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		0909B4F469E3464B91F16DC7 /* AlviNastaleeqRegular.ttf */ = {isa = PBXFileReference; name = "AlviNastaleeqRegular.ttf"; path = "../src/assets/fonts/AlviNastaleeqRegular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		4C6E2D22D10E458AA05240BC /* JameelNooriNastaleeqKasheeda.ttf */ = {isa = PBXFileReference; name = "JameelNooriNastaleeqKasheeda.ttf"; path = "../src/assets/fonts/JameelNooriNastaleeqKasheeda.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		289C5C03185F45EF99017B5E /* AlQalamShekastahRegular.ttf */ = {isa = PBXFileReference; name = "AlQalamShekastahRegular.ttf"; path = "../src/assets/fonts/AlQalamShekastahRegular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		E6DD7FDBA2814F6092545191 /* AlQalam-Shekastah-Regular.ttf */ = {isa = PBXFileReference; name = "AlQalam-Shekastah-Regular.ttf"; path = "../src/assets/fonts/AlQalam-Shekastah-Regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		4DC4C4C73FAA4CBC96CA9DD2 /* AlQalam-Taj-Nastaleeq-Regular.ttf */ = {isa = PBXFileReference; name = "AlQalam-Taj-Nastaleeq-Regular.ttf"; path = "../src/assets/fonts/AlQalam-Taj-Nastaleeq-Regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		3727A645C21C4A38A5308CE2 /* Alvi-Nastaleeq-Regular.ttf */ = {isa = PBXFileReference; name = "Alvi-Nastaleeq-Regular.ttf"; path = "../src/assets/fonts/Alvi-Nastaleeq-Regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		F696B6D63F9D47469A8DAA61 /* Jameel-Noori-Nastaleeq-Kasheeda.ttf */ = {isa = PBXFileReference; name = "Jameel-Noori-Nastaleeq-Kasheeda.ttf"; path = "../src/assets/fonts/Jameel-Noori-Nastaleeq-Kasheeda.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		0F547CDF3A9E4A148CE3C218 /* AlQalam-Ubaid-Regular.ttf */ = {isa = PBXFileReference; name = "AlQalam-Ubaid-Regular.ttf"; path = "../src/assets/fonts/AlQalam-Ubaid-Regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		08C1122A1BE04B72AD8E3C49 /* Alvi-Regular.ttf */ = {isa = PBXFileReference; name = "Alvi-Regular.ttf"; path = "../src/assets/fonts/Alvi-Regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		20929910CBED4C31A141C839 /* Attari-Quran-Regular.ttf */ = {isa = PBXFileReference; name = "Attari-Quran-Regular.ttf"; path = "../src/assets/fonts/Attari-Quran-Regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		361780040C8041569BC4FD12 /* PDMS-Bukhari-Regular.ttf */ = {isa = PBXFileReference; name = "PDMS-Bukhari-Regular.ttf"; path = "../src/assets/fonts/PDMS-Bukhari-Regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		D6DDB12230774621B1904BAE /* PDMS-Jauhar-Regular.ttf */ = {isa = PBXFileReference; name = "PDMS-Jauhar-Regular.ttf"; path = "../src/assets/fonts/PDMS-Jauhar-Regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		3A6C287DDAF945C4B0F48BBE /* PDMS-Penci-Nafees-Regular.ttf */ = {isa = PBXFileReference; name = "PDMS-Penci-Nafees-Regular.ttf"; path = "../src/assets/fonts/PDMS-Penci-Nafees-Regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		456095A688CB4F509112F2FE /* PDMS-Saleem-QuranFont-Regular.ttf */ = {isa = PBXFileReference; name = "PDMS-Saleem-QuranFont-Regular.ttf"; path = "../src/assets/fonts/PDMS-Saleem-QuranFont-Regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		ADC0C37D26E549E586909FBA /* Rouqa-Unicode-Rouqa-Unicode.ttf */ = {isa = PBXFileReference; name = "Rouqa-Unicode-Rouqa-Unicode.ttf"; path = "../src/assets/fonts/Rouqa-Unicode-Rouqa-Unicode.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		A072D925C6704B89810A725B /* Sulus-Unicode-Sulus-Unicode.ttf */ = {isa = PBXFileReference; name = "Sulus-Unicode-Sulus-Unicode.ttf"; path = "../src/assets/fonts/Sulus-Unicode-Sulus-Unicode.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		EC319794918D451692BB01EE /* Tehreer-Regular.ttf */ = {isa = PBXFileReference; name = "Tehreer-Regular.ttf"; path = "../src/assets/fonts/Tehreer-Regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		C188466CE8C04F2D9A2E2584 /* UL-Sajid-Heading-Regular.ttf */ = {isa = PBXFileReference; name = "UL-Sajid-Heading-Regular.ttf"; path = "../src/assets/fonts/UL-Sajid-Heading-Regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +183,7 @@
 				00E356EF1AD99517003FC87E /* afsanayUpgradedAppTests */,
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
+				F051EA38A2FF428C9E6580E3 /* Resources */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -123,6 +198,51 @@
 			);
 			name = Products;
 			sourceTree = "<group>";
+		};
+		F051EA38A2FF428C9E6580E3 /* Resources */ = {
+			isa = "PBXGroup";
+			children = (
+				121E09C24EBD466DA4284FFA /* Nafees.ttf */,
+				56F1053382A04ADBB5248498 /* NotoNaskhArabic-Bold.ttf */,
+				F831D8B6B882426F9A49AA11 /* NotoNaskhArabic-Regular.ttf */,
+				851D41CE94034DE897677283 /* AntDesign.ttf */,
+				7C97ED2E6F7849C581865889 /* Entypo.ttf */,
+				EB9DEB0B91414BEA99948C5C /* EvilIcons.ttf */,
+				F8A36D07154E4B719F0128F6 /* Feather.ttf */,
+				066AA7A55EEE472C91E60736 /* FontAwesome.ttf */,
+				4D11D434FF6941A09DD4C64C /* FontAwesome5_Brands.ttf */,
+				E6052AAF6D624AEFA3FB5BDE /* FontAwesome5_Regular.ttf */,
+				02DFA8ACC2F34988B5326652 /* FontAwesome5_Solid.ttf */,
+				396AAAAF1AD24C569D899048 /* Fontisto.ttf */,
+				C7719860971F4C1DAC68D9C6 /* Foundation.ttf */,
+				AA81BE741FCA4233AC9E039E /* Ionicons.ttf */,
+				C8B48FF2AA2D4B25BE8ECED7 /* MaterialCommunityIcons.ttf */,
+				C61E412277AB43E4BEBF6318 /* MaterialIcons.ttf */,
+				F1FAF76139D642F791FE0F93 /* Octicons.ttf */,
+				AA1AF5F917F14D75B0F90A32 /* SimpleLineIcons.ttf */,
+				F008CDECD4FE43ADAACA44A7 /* Zocial.ttf */,
+				0909B4F469E3464B91F16DC7 /* AlviNastaleeqRegular.ttf */,
+				4C6E2D22D10E458AA05240BC /* JameelNooriNastaleeqKasheeda.ttf */,
+				289C5C03185F45EF99017B5E /* AlQalamShekastahRegular.ttf */,
+				E6DD7FDBA2814F6092545191 /* AlQalam-Shekastah-Regular.ttf */,
+				4DC4C4C73FAA4CBC96CA9DD2 /* AlQalam-Taj-Nastaleeq-Regular.ttf */,
+				3727A645C21C4A38A5308CE2 /* Alvi-Nastaleeq-Regular.ttf */,
+				F696B6D63F9D47469A8DAA61 /* Jameel-Noori-Nastaleeq-Kasheeda.ttf */,
+				0F547CDF3A9E4A148CE3C218 /* AlQalam-Ubaid-Regular.ttf */,
+				08C1122A1BE04B72AD8E3C49 /* Alvi-Regular.ttf */,
+				20929910CBED4C31A141C839 /* Attari-Quran-Regular.ttf */,
+				361780040C8041569BC4FD12 /* PDMS-Bukhari-Regular.ttf */,
+				D6DDB12230774621B1904BAE /* PDMS-Jauhar-Regular.ttf */,
+				3A6C287DDAF945C4B0F48BBE /* PDMS-Penci-Nafees-Regular.ttf */,
+				456095A688CB4F509112F2FE /* PDMS-Saleem-QuranFont-Regular.ttf */,
+				ADC0C37D26E549E586909FBA /* Rouqa-Unicode-Rouqa-Unicode.ttf */,
+				A072D925C6704B89810A725B /* Sulus-Unicode-Sulus-Unicode.ttf */,
+				EC319794918D451692BB01EE /* Tehreer-Regular.ttf */,
+				C188466CE8C04F2D9A2E2584 /* UL-Sajid-Heading-Regular.ttf */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+			path = "";
 		};
 /* End PBXGroup section */
 
@@ -214,6 +334,43 @@
 			files = (
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
+				862C77743D274530871958CC /* Nafees.ttf in Resources */,
+				CA6E53DE2FA348859F6D48C0 /* NotoNaskhArabic-Bold.ttf in Resources */,
+				362C68D84E1648D0963C049B /* NotoNaskhArabic-Regular.ttf in Resources */,
+				CACD7967A66244888DB7945D /* AntDesign.ttf in Resources */,
+				8FD95D1D463F4A30A7182D78 /* Entypo.ttf in Resources */,
+				69FDA0E9FDF746C5BF4B4D54 /* EvilIcons.ttf in Resources */,
+				A265C1B2ECC4443E84E5098A /* Feather.ttf in Resources */,
+				1368230F5DA04205A950BD85 /* FontAwesome.ttf in Resources */,
+				3C62D180D05547DFA2AA12AE /* FontAwesome5_Brands.ttf in Resources */,
+				C880DD23E029404E8D522FC7 /* FontAwesome5_Regular.ttf in Resources */,
+				6F42A9E0FA6E4A42938E90B0 /* FontAwesome5_Solid.ttf in Resources */,
+				3FCB8ACC22DF4E5D966D89CE /* Fontisto.ttf in Resources */,
+				8CC2395981E546D49DE735AC /* Foundation.ttf in Resources */,
+				35D6326079844570997BD64C /* Ionicons.ttf in Resources */,
+				F94C8B3F4907468AB5827672 /* MaterialCommunityIcons.ttf in Resources */,
+				9945484EFB2846F3BD4E5DF2 /* MaterialIcons.ttf in Resources */,
+				C9BE1C50EEB84CE5976141AC /* Octicons.ttf in Resources */,
+				F39EEC6235BE4BCDADBB70C9 /* SimpleLineIcons.ttf in Resources */,
+				1C01F557655E4B749348C6E3 /* Zocial.ttf in Resources */,
+				1CF5C7DCDFFF437787139139 /* AlviNastaleeqRegular.ttf in Resources */,
+				9B382EF6841B47CE96518BF1 /* JameelNooriNastaleeqKasheeda.ttf in Resources */,
+				D79A95E082BF487A97C2FAE7 /* AlQalamShekastahRegular.ttf in Resources */,
+				EFA923C6DA9D4C56984FCCA5 /* AlQalam-Shekastah-Regular.ttf in Resources */,
+				B07368209CC64D40BBC7CD66 /* AlQalam-Taj-Nastaleeq-Regular.ttf in Resources */,
+				C0C9D3085A6F4BB4BB325BCD /* Alvi-Nastaleeq-Regular.ttf in Resources */,
+				BB01A496C0EB46C9BC5EFE13 /* Jameel-Noori-Nastaleeq-Kasheeda.ttf in Resources */,
+				597997882916493FAE28D6BD /* AlQalam-Ubaid-Regular.ttf in Resources */,
+				085C3A3583F64CEFB7AF81CA /* Alvi-Regular.ttf in Resources */,
+				3B027C222AC34B8182FC9A87 /* Attari-Quran-Regular.ttf in Resources */,
+				3AD814A523074BBD95F42E5A /* PDMS-Bukhari-Regular.ttf in Resources */,
+				16490D1C523D4F658AD3F66C /* PDMS-Jauhar-Regular.ttf in Resources */,
+				49F34E3825CF4FD1AF0BD430 /* PDMS-Penci-Nafees-Regular.ttf in Resources */,
+				41BD5910D5A343549E39A828 /* PDMS-Saleem-QuranFont-Regular.ttf in Resources */,
+				E110E1620EBE43E7A6C916E2 /* Rouqa-Unicode-Rouqa-Unicode.ttf in Resources */,
+				DC2EDB62444E4F64984432E3 /* Sulus-Unicode-Sulus-Unicode.ttf in Resources */,
+				451E35FEF0024F00A369B991 /* Tehreer-Regular.ttf in Resources */,
+				897646D4F2BD4D7EBD89BB85 /* UL-Sajid-Heading-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -29,7 +29,7 @@ export default class Novel extends Component {
 //     }
 //   }
   render() {
-    let {item, index,navigation} = this.props;
+    let {item, index,navigation, fontFamily} = this.props;
     let name = item.urdu_name || item.name;
     let description = item.urdu_description || item.description;
     let authorName = item.author.urdu_name
@@ -89,13 +89,14 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   title: {
-    fontSize: 20,
-    fontFamily: 'NotoNaskhArabic-Regular',
+    fontSize: 22,
     textAlign: 'right',
+    fontFamily: 'Alvi-Nastaleeq-Regular',
   },
   description: {
     textAlign: 'right',
-    fontFamily: 'NotoNaskhArabic-Regular',
+    fontFamily: 'Alvi-Nastaleeq-Regular',
+    fontSize: 18,
   },
   adContainer: {
     marginBottom: 4,

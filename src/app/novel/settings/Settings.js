@@ -65,6 +65,21 @@ export default class Page extends Component {
                 onValueChange={this.fontFamilyChanged}>
                 <Picker.Item label="Regular" value="NotoNaskhArabic-Regular" />
                 <Picker.Item label="Bold" value="NotoNaskhArabic-Bold" />
+                <Picker.Item label="AlQalam-Shekastah-Regular" value="AlQalam-Shekastah-Regular"/>
+                <Picker.Item label="AlQalam-Taj-Nastaleeq-Regular" value="AlQalam-Taj-Nastaleeq-Regular"/>
+                <Picker.Item label="AlQalam-Ubaid-Regular" value="AlQalam-Ubaid-Regular"/>
+                <Picker.Item label="Alvi-Regular" value="Alvi-Regular"/>
+                <Picker.Item label="Alvi-Nastaleeq-Regular" value="Alvi-Nastaleeq-Regular"/>
+                <Picker.Item label="Attari-Quran-Regular" value="Attari-Quran-Regular"/>
+                <Picker.Item label="Jameel-Noori-Nastaleeq-Khaseeda" value="Jameel-Noori-Nastaleeq-Kasheeda"/>
+                <Picker.Item label="PDMS-Bukhari-Regular" value="PDMS-Bukhari-Regular"/>
+                <Picker.Item label="PDMS-Jauhar-Regular" value="PDMS-Jauhar-Regular"/>
+                <Picker.Item label="PDMS-Penci-Nafees-Regular" value="PDMS-Penci-Nafees-Regular"/>
+                <Picker.Item label="PDMS-Saleem-QuranFont-Regular" value="PDMS-Saleem-QuranFont-Regular"/>
+                <Picker.Item label="Rouqa-Unicode-Rouqa-Unicode" value="Rouqa-Unicode-Rouqa-Unicode"/>
+                <Picker.Item label="Sulus-Unicode-Sulus-Unicode" value="Sulus-Unicode-Sulus-Unicode"/>
+                <Picker.Item label="Tehreer-Regular" value="Tehreer-Regular"/>
+                <Picker.Item label="UL-Sajid-Heading-Regular" value="UL-Sajid-Heading-Regular"/>
               </Picker>
             </View>
           </View>
