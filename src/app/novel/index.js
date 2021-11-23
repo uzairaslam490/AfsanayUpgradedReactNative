@@ -2,6 +2,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { getNovel, setNovel } from './actions';
+import { setNovelPage } from './page/actions';
 import Novel from './Novel';
 
 const mapStateToProps = (store) => {
@@ -16,6 +17,7 @@ const mapDispatchToProps = (dispatch) => {
   return {
     getNovel: (id, reset) => dispatch(getNovel(id, reset)),
     setNovel: (params) => dispatch(setNovel(params)),
+    setNovelPage: (params) => dispatch(setNovelPage(params)),
   };
 };
 

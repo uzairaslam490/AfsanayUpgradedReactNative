@@ -24,18 +24,15 @@ export default class NovelsList extends Component {
     this.getNovels();
   }
   renderItem(options) {
-    let {allowAuthorPage} = this.props;
-    return <Novel {...options} allowAuthorPage={allowAuthorPage} navigation={this.props.navigation}/>;
+    return <Novel novel={options.item} navigation={this.props.navigation}/>;
   }
   keyExtractor(item, index) {
-    console.log(item);
     return item.id.toString();
   }
   onEndReached() {
     this.getNovels();
   }
   getNovels(reset = false) {
-    console.log('getNovels');
     let {getNovels, novels, isFetching, hasMore} = this.props;
     if  (!isFetching && hasMore) {
       let params = {
@@ -51,7 +48,7 @@ export default class NovelsList extends Component {
   }
   render() {
     let {novels, isFetching} = this.props;
-    console.log(novels);
+    // console.log(novels);
     return (
       <FlatList
         data={novels}

@@ -6,7 +6,8 @@ import PageRoot from './page/index';
 import PagesRoot from './pages/index';
 import SettingsRoot from './settings/index';
 import { NavigationContainer } from '@react-navigation/native';
-import { Button } from 'react-native';
+import { Button, Text, TouchableOpacity } from 'react-native';
+import Loading from '../common/loading';
 
 export const novelprops = (props) =>{
   return props;
@@ -27,28 +28,26 @@ export default class Novel extends React.Component {
   }
 
   componentWillUnmount(){
-    let { setNovel } = this.props;
+    let { setNovel, setNovelPage } = this.props;
     setNovel({
       // novel: null,
       isFetching: false,
       error: null,
     });
+    setNovelPage({
+      no: 1,
+    });
   }
 
   getNovel(){
-    let { getNovel, setNovel, id } = this.props;
-    let {novel} = this.props.route.params;
-    if (novel){
-      setNovel({
-        novel: novel,
-      });
-      id = novel.id;
-    }
+    let { getNovel} = this.props;
+    let{id} = this.props.route.params;
     getNovel(id);
   }
   render() {
     let { novel, isFetching, error, id,navigation } = this.props;
-    let name = (novel) ? ((novel.urdu_name) ? novel.urdu_name : novel.name) : 'ناول';
+    // console.warn(novel.totalPages);
+    // let name = (novel) ? ((novel.urdu_name) ? novel.urdu_name : novel.name) : 'ناول';
     const {params} = this.props.route;
     const Page = (props) => {
       return <PageRoot params={params} {...props} />;
@@ -57,9 +56,11 @@ export default class Novel extends React.Component {
       return <PagesRoot params={params} {...props} />;
     };
     navigation.setOptions({
-      title: params.novel.urdu_name,
+      title: params.name,
       headerTitleStyle: {fontFamily: 'Alvi-Nastaleeq-Regular', fontSize: 28},
-      headerRight: () => (<Button onPress={() => navigation.navigate('Settings')} title="کنٹرول"/>),
+      headerRight: () => (<TouchableOpacity onPress={() => navigation.navigate('Settings')}>
+                          <Icon name="settings-outline" size={25}/>
+                          </TouchableOpacity>),
     });
     return (
       <TabView.Navigator screenOptions={{headerShown: false, headerTitleStyle: {fontFamily: 'Alvi-Nastaleeq-Regular'}}}>
@@ -68,7 +69,7 @@ export default class Novel extends React.Component {
         }}} /> */}
         <TabView.Screen name="PageRoot" component ={Page} options={{title: 'ناول',tabBarIcon:(tintColor) => {
           return <Icon name="reader-outline" color={tintColor} size={25}/>;
-        }}}/>
+        },}}/>
         <TabView.Screen name="PagesRoot" component ={Pages} options={{title: 'صفحات', tabBarIcon:(tintColor) => {
           return <Icon name="book-outline" color={tintColor} size={25}/>;
         },

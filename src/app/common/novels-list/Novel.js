@@ -16,9 +16,12 @@ export default class Novel extends Component {
     // this.gotoAuthor = this.gotoAuthor.bind(this);
   }
   gotoNovel() {
-    let {item,navigation} = this.props;
-    let novel = item;
-    navigation.navigate('Novel', {novel});
+    let {novel,navigation} = this.props;
+    console.log(novel);
+    navigation.navigate('Novel', {
+      id: novel.id,
+      name: novel.urdu_name,
+    });
   }
 //   gotoAuthor() {
 //     let {item, allowAuthorPage} = this.props;
@@ -29,18 +32,18 @@ export default class Novel extends Component {
 //     }
 //   }
   render() {
-    let {item, index,navigation, fontFamily} = this.props;
-    let name = item.urdu_name || item.name;
-    let description = item.urdu_description || item.description;
-    let authorName = item.author.urdu_name
-      ? item.author.urdu_name
-      : item.author.name;
+    let {novel} = this.props;
+    let name = novel.urdu_name || novel.name;
+    let description = novel.urdu_description || novel.description;
+    let authorName = novel.author.urdu_name
+      ? novel.author.urdu_name
+      : novel.author.name;
     return (
       <View>
         <TouchableOpacity activeOpacity={0.7} onPress={this.gotoNovel}>
           <View style={styles.container}>
             <View style={styles.photoContainer}>
-              <Image source={{uri: item.thumbUrl}} style={styles.photo} />
+              <Image source={{uri: novel.thumbUrl}} style={styles.photo} />
             </View>
             <View style={styles.infoContainer}>
               <Text style={styles.title}>{name}</Text>

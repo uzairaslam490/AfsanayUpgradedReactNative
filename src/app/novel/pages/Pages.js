@@ -19,9 +19,9 @@ export default class Page extends Component {
   }
   goToPage(page){
     let { getNovelPage, no, navigation } = this.props;
-    let {novel} = this.props.params;
+    let {id} = this.props.params;
     if (no !== page){
-      getNovelPage(novel.id, page);
+      getNovelPage(id, page);
     }
     navigation.navigate('PageRoot');
   }
@@ -30,7 +30,11 @@ export default class Page extends Component {
     return (
       <View style={styles.mainContainer}>
         <ScrollView>
-          <View style={{ flexDirection: 'column', margin: 5, backgroundColor: '#fff' }}>
+          <View style={{ flexDirection: 'row-reverse',
+                         flexWrap: 'wrap',
+                         justifyContent: 'space-around',
+                         margin: 15,
+                         backgroundColor: '#fff' }}>
             {(() => {
               let pages = [];
               for (let i = 1; i <= novel.totalPages; i++){

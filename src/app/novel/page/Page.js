@@ -4,6 +4,7 @@ import {View, Text, StyleSheet, ScrollView, TouchableOpacity} from 'react-native
 import { COLOR_PRIMARY, COLOR_FACEBOOK_GREY_90 } from '../../colors';
 import Loading from '../../common/loading';
 import Icon  from 'react-native-vector-icons/Ionicons';
+import { getNovel, setNovel } from '../actions';
 
 export default class Page extends React.Component {
   constructor(props){
@@ -12,23 +13,33 @@ export default class Page extends React.Component {
      this.previousPage = this.previousPage.bind(this);
    }
   componentDidMount(){
-    let { getNovelPage, no, text } = this.props;
-    let {novel} = this.props.params;
+    let { getNovelPage, no, text, setNovelPage} = this.props;
+    let {id} = this.props.params;
     if (!text){
-      getNovelPage(novel.id, no);
+      getNovelPage(id, no);
     }
+    // console.warn(this.props.novel.totalPages);
     // try {
     //   advert.loadAd(request.build());
     // } catch (err){}
   }
   componentWillUnmount(){
-    let { setNovelPage } = this.props;
+    let { setNovelPage , no, navigation} = this.props;
+    console.log(this.props);
+    //  if (!navigation.goBack()){
     setNovelPage({
       text: null,
       // no: 1,
       isFetching: false,
       error: null,
     });
+  // } else {
+  //   setNovelPage({
+  //     text: null,
+  //     no: 1,
+  //     isFetching: false,
+  //     error: null,
+  //   });
   }
   // // componentWillReceiveProps(props){
   // //   let { no } = props;
@@ -54,7 +65,7 @@ export default class Page extends React.Component {
     }
   }
   render() {
-    let { text, isFetching, error, no, novel, getNovelPage, fontSize, fontFamily } = this.props;
+    let { text, isFetching, error, no, getNovelPage,novel, fontSize, fontFamily } = this.props;
     // console.warn(this.props);
     // const {title} = this.props.params;
     // const {navigation} = this.props;
@@ -67,6 +78,12 @@ export default class Page extends React.Component {
     //       return <Icon name="reader-outline" size={25}/>;
     //     }});
     //   }
+    if (error){
+      <Text>Error: {error}</Text>;
+    }
+    if (isFetching || novel === null){
+      return <Loading/>;
+    } else {
     return (
       // eslint-disable-next-line react-native/no-inline-styles
         <View style={styles.mainContainer}>
@@ -97,7 +114,7 @@ export default class Page extends React.Component {
               </TouchableOpacity>
             </View>
           </View>
-    );
+    );}
   }
 }
 

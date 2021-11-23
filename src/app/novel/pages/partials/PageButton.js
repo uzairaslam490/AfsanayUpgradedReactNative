@@ -39,6 +39,8 @@ const styles = StyleSheet.create({
   button: {
     padding: 5,
     margin: 5,
+    width: 100,
+    height: 50,
     borderRadius: 5,
     borderWidth: 0.5,
     borderColor: '#aaaaaa',
@@ -47,6 +49,7 @@ const styles = StyleSheet.create({
     backgroundColor: COLOR_PRIMARY,
   },
   text: {
+    marginTop: 5,
     textAlign: 'center',
     fontFamily: 'NotoNaskhArabic-Regular',
     color: '#666666',
