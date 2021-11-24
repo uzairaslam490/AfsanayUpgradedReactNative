@@ -10,6 +10,7 @@ import store from './store';
 import { parseAsync } from '@babel/core';
 import { TabRouter } from 'react-navigation';
 import Settings from './app/novel/settings';
+import Author from './app/author/index';
 const { Screen, Navigator } = createNativeStackNavigator();
 
 export default function App() {
@@ -19,6 +20,7 @@ export default function App() {
           <Navigator>
               <Screen name="Home" options={{headerShown: false}} component={Home}/>
               <Screen name="Novel" options={{headerTitleAlign: 'center'}} component={Novel} />
+              <Screen name="Author" options={{headerTitleAlign: 'center'}} component={Author}/>
               <Screen name="Settings" options={{headerTitleAlign: 'center'}} component={Settings}/>
           </Navigator>
       </NavigationContainer>

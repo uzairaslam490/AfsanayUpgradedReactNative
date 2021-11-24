@@ -24,7 +24,8 @@ export default class NovelsList extends Component {
     this.getNovels();
   }
   renderItem(options) {
-    return <Novel novel={options.item} navigation={this.props.navigation}/>;
+    let {allowAuthorPage} = this.props;
+    return <Novel novel={options.item} allowAuthorPage={allowAuthorPage} navigation={this.props.navigation}/>;
   }
   keyExtractor(item, index) {
     return item.id.toString();

@@ -1,4 +1,5 @@
 /* eslint-disable prettier/prettier */
+/* eslint-disable react-native/no-inline-styles */
 import React, {Component} from 'react';
 import {View, Text, StyleSheet, TouchableOpacity, Image} from 'react-native';
 import AdBanner from '../ad-banner';
@@ -13,24 +14,26 @@ export default class Novel extends Component {
   constructor(props) {
     super(props);
     this.gotoNovel = this.gotoNovel.bind(this);
-    // this.gotoAuthor = this.gotoAuthor.bind(this);
+    this.gotoAuthor = this.gotoAuthor.bind(this);
   }
   gotoNovel() {
     let {novel,navigation} = this.props;
-    console.log(novel);
     navigation.navigate('Novel', {
       id: novel.id,
       name: novel.urdu_name,
     });
   }
-//   gotoAuthor() {
-//     let {item, allowAuthorPage} = this.props;
-//     if  (allowAuthorPage) {
-//       Actions.author({
-//         id: item.author.id,
-//       });
-//     }
-//   }
+  gotoAuthor() {
+    let {novel, allowAuthorPage, navigation} = this.props;
+    let id = novel.author.id;
+    let name = novel.author.urdu_name;
+    if (allowAuthorPage){
+      navigation.navigate('Author',{
+        id: id,
+        name: name,
+      });
+    }
+  }
   render() {
     let {novel} = this.props;
     let name = novel.urdu_name || novel.name;
@@ -51,9 +54,9 @@ export default class Novel extends Component {
                 {description}
               </Text>
               <View>
-                {/* <TouchableOpacity onPress={this.gotoAuthor}> */}
-                {/* <Text>{authorName}</Text> */}
-                {/* </TouchableOpacity> */}
+                <TouchableOpacity onPress={this.gotoAuthor}>
+                <Text style={{fontFamily: 'Alvi-Nastaleeq-Regular', fontSize: 20}}>مصنف : {authorName}</Text>
+                </TouchableOpacity>
               </View>
             </View>
           </View>
