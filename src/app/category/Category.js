@@ -18,7 +18,7 @@ export default class Home extends Component {
 
   constructor(props) {
     super(props);
-    this.getNovels = this.getNovels.bind(this);
+    this.getCategoryNovels = this.getCategoryNovels.bind(this);
   }
 
   componentWillUnmount() {
@@ -26,21 +26,30 @@ export default class Home extends Component {
     resetNovels();
   }
 
-  componentDidMount() {}
+  componentDidMount() {
+  }
 
-  getNovels(params = {}, reset = false) {
-    let {getNovels, category} = this.props;
-    params.categoryId = category.id;
-    getNovels(params, reset);
+  getCategoryNovels(params, reset = false) {
+    let {getCategoryNovels} = this.props;
+    let {id} = this.props.route.params;
+    params.categoryId = id;
+    getCategoryNovels(params, reset);
   }
   render() {
-    let { novels, isFetching, error, hasMore, category } = this.props;
+    let { novels, isFetching, error, hasMore, navigation } = this.props;
+    let {name} = this.props.route.params;
+    navigation.setOptions({
+      title: name,
+      headerTitleStyle: {fontFamily: 'Alvi-Nastaleeq-Regular', fontSize: 28},
+      headerTitleAlign: 'center',
+    });
     return (
     <NovelsList
           isFetching={isFetching}
           novels={novels}
           hasMore={hasMore}
-          getNovels={this.getNovels}
+          getNovels={this.getCategoryNovels}
+          navigation={navigation}
     />
     );
   }

@@ -10,7 +10,6 @@ const mapStateToProps = (store) => {
     no: store.page.no,
     isFetching: store.page.isFetching,
     novel: store.novel.novel,
-    totalPages: store.novel.totalPages,
   };
 };
 

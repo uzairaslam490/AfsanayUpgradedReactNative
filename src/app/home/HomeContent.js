@@ -7,6 +7,8 @@ import  Icon  from 'react-native-vector-icons/Ionicons';
 import List from './List';
 import Authors from '../authors/index';
 import category from '../category';
+import DrawerComponent from './drawer/index';
+import CategoryListItem from './drawer/CategoryListItem';
 
 
 const styles = StyleSheet.create({
@@ -35,9 +37,9 @@ export default class HomeContent extends React.Component {
               <Drawer.Screen name="Authors" component={Authors} options={{title: 'مصنف', headerTitleAlign: 'center', headerTitleStyle: {fontFamily: 'Alvi-Nastaleeq-Regular', fontSize: 28},
               drawerLabel: 'Authors', drawerIcon:(tintColor) => {
               return <Icon name="people" color={tintColor} size={20}/>;}}}/>
-              {/* <Drawer.Screen name="Categories" component={category} options={{title: 'اقسام', headerTitleAlign: 'center', headerTitleStyle: {fontFamily: 'Alvi-Nastaleeq-Regular', fontSize: 28},
+              <Drawer.Screen name="Categories" component={DrawerComponent} options={{headerShown: false,
               drawerLabel: 'Categories', drawerIcon:(tintColor) => {
-              return <Icon name="arrow-down" color={tintColor} size={20}/>;}}}/> */}
+              return <Icon name="arrow-down" color={tintColor} size={20}/>;}}}/>
             </Drawer.Navigator>
           );
     }

@@ -8,6 +8,8 @@ import page from '../app/novel/page/reducer';
 import list from '../app/home/List/reducer';
 import authors from '../app/authors/reducer';
 import author from '../app/author/reducer';
+import category from '../app/category/reducer';
+import drawer from '../app/home/drawer/reducer';
 
 const reducers = combineReducers({
   home,
@@ -16,6 +18,8 @@ const reducers = combineReducers({
   list,
   authors,
   author,
+  drawer,
+  category,
 });
 
 const Store = createStore(
