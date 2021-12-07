@@ -3,6 +3,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import React, {Component} from 'react';
 import {View, Text, StyleSheet, TouchableOpacity} from 'react-native';
 import {COLOR_PRIMARY} from '../../colors';
+import Loading from '../../common/loading';
 
 export default class CategoryListItem extends Component {
   constructor(props) {
@@ -17,13 +18,16 @@ export default class CategoryListItem extends Component {
   }
 
   render() {
-    let {category} = this.props;
+    let {category, isFetching} = this.props;
     // return (
     //     <View>
     //         <Text>Hello</Text>
     //     </View>
     // );
     let name = category.urdu_name || category.name;
+    if (isFetching){
+      return <Loading/>;
+    } else {
     return (
       <TouchableOpacity
         activeOpacity={0.7}
@@ -32,6 +36,7 @@ export default class CategoryListItem extends Component {
         <Text style={styles.name}>{name}</Text>
       </TouchableOpacity>
     );
+    }
   }
 }
 

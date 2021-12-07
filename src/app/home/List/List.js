@@ -2,6 +2,7 @@
 import NovelsList from '../../common/novels-list/index';
 import React, {Component} from 'react';
 import { View, StyleSheet } from 'react-native';
+import Loading from '../../common/loading/index';
 
 const styles = StyleSheet.create({
   container: {

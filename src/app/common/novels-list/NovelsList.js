@@ -2,8 +2,9 @@
 import React, {Component} from 'react';
 import {FlatList, View, Text, RefreshControl} from 'react-native';
 import novel from '../../novel';
+import Loading from '../loading';
 import Novel from './Novel';
-// import {COLOR_PRIMARY} from '../../colors';
+import {COLOR_PRIMARY} from '../../colors';
 
 export default class NovelsList extends Component {
   static get defaultProps() {
@@ -45,7 +46,7 @@ export default class NovelsList extends Component {
   }
 }
   refreshList() {
-    this.getNovels();
+    this.getNovels({}, true);
   }
   render() {
     let {novels, isFetching} = this.props;
@@ -56,11 +57,13 @@ export default class NovelsList extends Component {
         renderItem={this.renderItem}
         keyExtractor={this.keyExtractor}
         onEndReached={this.onEndReached}
+        onEndReachedThreshold={0.5}
         refreshing={isFetching}
         refreshControl={
           <RefreshControl
             refreshing={isFetching}
             onRefresh={this.refreshList}
+            colors={[COLOR_PRIMARY]}
           />
         }
       />

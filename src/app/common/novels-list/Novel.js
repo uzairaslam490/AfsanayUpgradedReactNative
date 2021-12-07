@@ -3,6 +3,7 @@
 import React, {Component} from 'react';
 import {View, Text, StyleSheet, TouchableOpacity, Image} from 'react-native';
 import AdBanner from '../ad-banner';
+import Loading from '../loading';
 
 export default class Novel extends Component {
   static get defaultProps() {
