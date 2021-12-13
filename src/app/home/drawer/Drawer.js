@@ -52,7 +52,9 @@ export default class Drawer extends Component {
 
   render(){
     let { categories, isFetching, error } = this.props;
-
+    if (isFetching) {
+      return <Loading/>;
+    } else  {
     return (
       categories.map((category, index) => {
         return (
@@ -89,6 +91,7 @@ export default class Drawer extends Component {
     //   </View>
 
     );
+    }
   }
 }
 

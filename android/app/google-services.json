@@ -1,172 +1,36 @@
 {
   "project_info": {
-    "project_number": "15250840582",
-    "firebase_url": "https://ic-dev-10ccf.firebaseio.com",
-    "project_id": "ic-dev-10ccf",
-    "storage_bucket": "ic-dev-10ccf.appspot.com"
+    "project_number": "964958863397",
+    "project_id": "afsanayy-a487f",
+    "storage_bucket": "afsanayy-a487f.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:15250840582:android:6dbb8fce0d0a854b",
+        "mobilesdk_app_id": "1:964958863397:android:a796553ede70a79a18bfcc",
         "android_client_info": {
-          "package_name": "com.watermelontech.quotesbag"
+          "package_name": "com.watermelontech.afsanayy"
         }
       },
       "oauth_client": [
         {
-          "client_id": "15250840582-9b0mbllkqgnhhd6g19kpmbjunhdrusd8.apps.googleusercontent.com",
-          "client_type": 1,
-          "android_info": {
-            "package_name": "com.watermelontech.quotesbag",
-            "certificate_hash": "00a51328680dd8d27cb63245089235b33462a8f3"
-          }
-        },
-        {
-          "client_id": "15250840582-9bofbg1gvnr7o237htmctr5t4et6eo36.apps.googleusercontent.com",
+          "client_id": "964958863397-6pp74ga3dmnq7ripkbslhjcecfjqulf8.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyDleRDTCU9B4g-dLOnhrGcKNttNc8wTiy4"
+          "current_key": "AIzaSyDxICP6uvuImedig7cJ_MT-pL1Xd7gZUcI"
         }
       ],
       "services": {
-        "analytics_service": {
-          "status": 1
-        },
         "appinvite_service": {
-          "status": 2,
           "other_platform_oauth_client": [
             {
-              "client_id": "15250840582-9bofbg1gvnr7o237htmctr5t4et6eo36.apps.googleusercontent.com",
+              "client_id": "964958863397-6pp74ga3dmnq7ripkbslhjcecfjqulf8.apps.googleusercontent.com",
               "client_type": 3
-            },
-            {
-              "client_id": "15250840582-du32f7pinjsl3i64uk846n94hv1enu0v.apps.googleusercontent.com",
-              "client_type": 2,
-              "ios_info": {
-                "bundle_id": "com.shafeeqtrading"
-              }
             }
           ]
-        },
-        "ads_service": {
-          "status": 2
-        }
-      }
-    },
-    {
-      "client_info": {
-        "mobilesdk_app_id": "1:15250840582:android:ae04f2ffab8becbe",
-        "android_client_info": {
-          "package_name": "com.watermelontech.ringtoneslab"
-        }
-      },
-      "oauth_client": [
-        {
-          "client_id": "15250840582-qa35tqb5ooln9emu5g2f2vrufklhffl1.apps.googleusercontent.com",
-          "client_type": 1,
-          "android_info": {
-            "package_name": "com.watermelontech.ringtoneslab",
-            "certificate_hash": "00a51328680dd8d27cb63245089235b33462a8f3"
-          }
-        },
-        {
-          "client_id": "15250840582-9bofbg1gvnr7o237htmctr5t4et6eo36.apps.googleusercontent.com",
-          "client_type": 3
-        }
-      ],
-      "api_key": [
-        {
-          "current_key": "AIzaSyDleRDTCU9B4g-dLOnhrGcKNttNc8wTiy4"
-        }
-      ],
-      "services": {
-        "analytics_service": {
-          "status": 1
-        },
-        "appinvite_service": {
-          "status": 2,
-          "other_platform_oauth_client": [
-            {
-              "client_id": "15250840582-9bofbg1gvnr7o237htmctr5t4et6eo36.apps.googleusercontent.com",
-              "client_type": 3
-            },
-            {
-              "client_id": "15250840582-du32f7pinjsl3i64uk846n94hv1enu0v.apps.googleusercontent.com",
-              "client_type": 2,
-              "ios_info": {
-                "bundle_id": "com.shafeeqtrading"
-              }
-            }
-          ]
-        },
-        "ads_service": {
-          "status": 2
-        }
-      }
-    },
-    {
-      "client_info": {
-        "mobilesdk_app_id": "1:15250840582:android:7c145aba4f7f9e04",
-        "android_client_info": {
-          "package_name": "com.jointaction.appleringtones"
-        }
-      },
-      "oauth_client": [
-        {
-          "client_id": "15250840582-9bofbg1gvnr7o237htmctr5t4et6eo36.apps.googleusercontent.com",
-          "client_type": 3
-        }
-      ],
-      "api_key": [
-        {
-          "current_key": "AIzaSyDleRDTCU9B4g-dLOnhrGcKNttNc8wTiy4"
-        }
-      ],
-      "services": {
-        "analytics_service": {
-          "status": 1
-        },
-        "appinvite_service": {
-          "status": 1,
-          "other_platform_oauth_client": []
-        },
-        "ads_service": {
-          "status": 2
-        }
-      }
-    },
-    {
-      "client_info": {
-        "mobilesdk_app_id": "1:15250840582:android:01f794bcb2a279ab",
-        "android_client_info": {
-          "package_name": "com.watermelontech.afsanay"
-        }
-      },
-      "oauth_client": [
-        {
-          "client_id": "15250840582-9bofbg1gvnr7o237htmctr5t4et6eo36.apps.googleusercontent.com",
-          "client_type": 3
-        }
-      ],
-      "api_key": [
-        {
-          "current_key": "AIzaSyDleRDTCU9B4g-dLOnhrGcKNttNc8wTiy4"
-        }
-      ],
-      "services": {
-        "analytics_service": {
-          "status": 1
-        },
-        "appinvite_service": {
-          "status": 1,
-          "other_platform_oauth_client": []
-        },
-        "ads_service": {
-          "status": 2
         }
       }
     }

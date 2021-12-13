@@ -1,21 +1,17 @@
 /* eslint-disable prettier/prettier */
 /* eslint-disable react-native/no-inline-styles */
 import * as React from 'react';
-import {FlatList, StyleSheet,View, Text, TouchableOpacity,Image,Linking, BackHandler} from 'react-native';
+import {FlatList, StyleSheet,View, Text, TouchableOpacity,Image,Linking, BackHandler, Alert} from 'react-native';
 import { createDrawerNavigator, DrawerContentScrollView,
   DrawerItem,
   DrawerItemList } from '@react-navigation/drawer';
-import NovelsList from '../common/novels-list/index';
 import  Icon  from 'react-native-vector-icons/Ionicons';
 import List from './List';
 import Authors from '../authors/index';
-import category from '../category';
 import DrawerComponent from './drawer/index';
-import CategoryListItem from './drawer/CategoryListItem';
-import RateUsModal from '../common/rate-us-modal';
 import {APP_STORE_URL} from '../config';
-import InAppReview from 'react-native-in-app-review';
-import { useFocusEffect } from '@react-navigation/core';
+import AsyncStorage from '@react-native-async-storage/async-storage';
+import messaging from '@react-native-firebase/messaging';
 const cover = require('../../assets/icons/cover.png');
 
 
@@ -39,6 +35,31 @@ function CustomDrawerContent(props) {
     </DrawerContentScrollView>
   );
 }
+const setNotification = async (value) => {
+  try {
+    let Jsonvalue = JSON.stringify(value);
+    await AsyncStorage.setItem('Notification', Jsonvalue);
+  } catch (e) {
+    console.log('Error saving value');
+  }
+};
+const getNotification = async () => {
+  try {
+      const notification = await AsyncStorage.getItem('Notification');
+      return notification != null ? JSON.parse(notification) : null;
+    } catch (e) {
+      console.log('Error reading value');
+    }
+};
+const removeNotification = async() =>{
+  try {
+    await AsyncStorage.removeItem('Notification');
+
+  }
+  catch {
+    console.log("Error: Couldn't Remove Item");
+  }
+};
 const Drawer = createDrawerNavigator();
 
 export default class HomeContent extends React.Component {
@@ -50,9 +71,34 @@ export default class HomeContent extends React.Component {
       // BackHandler.addEventListener('hardwareBackPress', this.RateUs));
     }
     componentDidMount() {
+      let {navigation} = this.props;
       // this._willBlurSubscription = this.props.navigation.addListener('willBlur', payload =>
       //   BackHandler.removeEventListener('hardwareBackPress', this.RateUs)
       // );
+      this.requestUserPermission();
+      messaging().onNotificationOpenedApp(remoteMessage => {
+        navigation.navigate('Novel', {id: remoteMessage.data.id,
+        name: remoteMessage.data.name});
+        setNotification(remoteMessage.data);
+      });
+    }
+    requestUserPermission = async() => {
+      const authStatus = await messaging().requestPermission();
+      const enabled =
+        authStatus === messaging.AuthorizationStatus.AUTHORIZED ||
+        authStatus === messaging.AuthorizationStatus.PROVISIONAL;
+      if (enabled) {
+        this.getFcmToken();
+        console.log('Authorization status:', authStatus);
+      }
+    }
+    getFcmToken = async () => {
+      const fcmToken = await messaging().getToken();
+      if (fcmToken) {
+       console.log('Your Firebase Token is:', fcmToken);
+      } else {
+       console.log('Failed', 'No token received');
+      }
     }
     RateUs =() =>{
       if (this.isSelectionModeEnabled()) {
@@ -67,11 +113,17 @@ export default class HomeContent extends React.Component {
       // this._willBlurSubscription && this._willBlurSubscription.remove();
     }
     render() {
+      let {navigation} = this.props;
         return (
             <Drawer.Navigator drawerContent={(props) => <CustomDrawerContent {...props} />}>
-              <Drawer.Screen name="HomeContent" component={List} options={{title: 'اردو ناول اور افسانے', headerTitleAlign: 'center', headerTitleStyle: {fontFamily: 'Alvi-Nastaleeq-Regular', fontSize: 28},
+              <Drawer.Screen name="HomeContent" component={List} options={{title: 'اردو ناول اور افسانے',headerRight: () => (
+              <TouchableOpacity onPress={() => navigation.navigate('Notifications')}>
+                  <Icon name="notifications" size={25} style={{marginRight: 10}}/>
+              </TouchableOpacity>),
+              headerTitleAlign: 'center', headerTitleStyle: {fontFamily: 'Alvi-Nastaleeq-Regular', fontSize: 28},
               drawerLabel: 'Home', drawerIcon:(tintColor) => {
               return <Icon name="home" color={tintColor} size={20}/>;}}}/>
+
               <Drawer.Screen name="Authors" component={Authors} options={{title: 'مصنف', headerTitleAlign: 'center', headerTitleStyle: {fontFamily: 'Alvi-Nastaleeq-Regular', fontSize: 28},
               drawerLabel: 'Authors', drawerIcon:(tintColor) => {
               return <Icon name="people" color={tintColor} size={20}/>;}}}/>

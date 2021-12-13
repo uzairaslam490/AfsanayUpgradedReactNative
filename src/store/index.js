@@ -10,6 +10,7 @@ import authors from '../app/authors/reducer';
 import author from '../app/author/reducer';
 import category from '../app/category/reducer';
 import drawer from '../app/home/drawer/reducer';
+import notifications from '../app/home/Notifications/reducer';
 
 const reducers = combineReducers({
   home,
@@ -20,6 +21,7 @@ const reducers = combineReducers({
   author,
   drawer,
   category,
+  notifications,
 });
 
 const Store = createStore(

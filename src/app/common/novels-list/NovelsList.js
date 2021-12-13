@@ -64,6 +64,7 @@ export default class NovelsList extends Component {
             refreshing={isFetching}
             onRefresh={this.refreshList}
             colors={[COLOR_PRIMARY]}
+            size={'large'}
           />
         }
       />

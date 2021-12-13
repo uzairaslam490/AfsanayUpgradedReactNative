@@ -1,7 +1,7 @@
 /* eslint-disable prettier/prettier */
 import * as React from 'react';
 import {Alert, BackHandler, Linking} from 'react-native';
-import {NavigationContainer} from '@react-navigation/native';
+import {NavigationContainer, useNavigation} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import Home from './app/home/index';
 import Novel from './app/novel/index';
@@ -12,6 +12,7 @@ import Settings from './app/novel/settings';
 import Author from './app/author/index';
 import Category from './app/category/index';
 import AsyncStorage from '@react-native-async-storage/async-storage';
+import Notification from './app/home/Notifications';
 import { APP_STORE_URL } from './app/config';
 const { Screen, Navigator } = createNativeStackNavigator();
 
@@ -92,6 +93,7 @@ export default function App() {
               <Screen name="Author" options={{headerTitleAlign: 'center'}} component={Author}/>
               <Screen name="Settings" options={{headerTitleAlign: 'center'}} component={Settings}/>
               <Screen name="Category" options={{headerTitleAlign: 'center'}} component={Category}/>
+              <Screen name="Notifications" options={{headerTitleAlign: 'center'}} component={Notification}/>
           </Navigator>
       </NavigationContainer>
     </Provider>
