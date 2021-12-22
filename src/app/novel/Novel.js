@@ -57,13 +57,13 @@ export default class Novel extends React.Component {
     };
     navigation.setOptions({
       title: params.name,
-      headerTitleStyle: {fontFamily: 'Alvi-Nastaleeq-Regular', fontSize: 28},
+      headerTitleStyle: {fontFamily: 'Alvi-Regular', fontSize: 28},
       headerRight: () => (<TouchableOpacity onPress={() => navigation.navigate('Settings')}>
                           <Icon name="settings-outline" size={25}/>
                           </TouchableOpacity>),
     });
     return (
-      <TabView.Navigator screenOptions={{headerShown: false, headerTitleStyle: {fontFamily: 'Alvi-Nastaleeq-Regular'}}}>
+      <TabView.Navigator screenOptions={{headerShown: false, headerTitleStyle: {fontFamily: 'Alvi-Regular'}}}>
         {/* <TabView.Screen name="SettingsRoot" component={SettingsRoot}  options = {{ title: 'کنٹرول', tabBarIcon:(tintColor) => {
           return <Icon name="settings-outline" color={tintColor} size={25}/>;
         }}} /> */}

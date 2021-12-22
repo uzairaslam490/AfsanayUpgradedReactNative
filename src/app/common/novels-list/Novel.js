@@ -56,7 +56,7 @@ export default class Novel extends Component {
               </Text>
               <View>
                 <TouchableOpacity onPress={this.gotoAuthor}>
-                <Text style={{fontFamily: 'Alvi-Nastaleeq-Regular', fontSize: 20}}>مصنف : {authorName}</Text>
+                <Text style={{fontFamily: 'Alvi-Regular', fontSize: 20}}>مصنف : {authorName}</Text>
                 </TouchableOpacity>
               </View>
             </View>
@@ -98,11 +98,11 @@ const styles = StyleSheet.create({
   title: {
     fontSize: 22,
     textAlign: 'right',
-    fontFamily: 'Alvi-Nastaleeq-Regular',
+    fontFamily: 'Alvi-Regular',
   },
   description: {
     textAlign: 'right',
-    fontFamily: 'Alvi-Nastaleeq-Regular',
+    fontFamily: 'Alvi-Regular',
     fontSize: 18,
   },
   adContainer: {

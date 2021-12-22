@@ -40,7 +40,7 @@ export default class Home extends Component {
     let {name} = this.props.route.params;
     navigation.setOptions({
       title: name,
-      headerTitleStyle: {fontFamily: 'Alvi-Nastaleeq-Regular', fontSize: 28},
+      headerTitleStyle: {fontFamily: 'Alvi-Regular', fontSize: 28},
       headerTitleAlign: 'center',
     });
     return (

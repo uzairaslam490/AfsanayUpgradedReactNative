@@ -6,18 +6,22 @@ const initialState = {
   isFetching: false,
   error: null,
   hasMore: true,
+  isFetched: false,
 };
+
 
 const Notifications = (state = initialState, action) => {
   switch (action.type) {
     case SET_NOTIFICATIONS:
       return Object.assign({}, state, action.payload);
     case APPEND_NOTIFICATIONS:
+      console.log('in reducer', action);
       return Object.assign({}, state, {
-        novels: [...state.novels, ...action.payload.novels],
+        notifications: [...state.notifications, ...action.payload.notifications],
         isFetching: action.payload.isFetching,
         error: null,
         hasMore: action.payload.hasMore,
+        isFetched: action.payload.isFetched,
       });
     default:
       return state;

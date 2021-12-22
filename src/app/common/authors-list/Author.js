@@ -46,7 +46,7 @@ const styles = StyleSheet.create({
   },
   title: {
     fontSize: 24,
-    fontFamily: 'Alvi-Nastaleeq-Regular',
+    fontFamily: 'Alvi-Regular',
     textAlign: 'center',
   },
   adContainer: {

@@ -8,6 +8,7 @@ const mapStateToProps = (store)=>{
         notifications: store.notifications.notifications,
         isFetching: store.notifications.isFetching,
         hasMore: store.notifications.hasMore,
+        isFetched: store.notifications.isFetched,
     };
 };
 

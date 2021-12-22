@@ -10,8 +10,9 @@ import List from './List';
 import Authors from '../authors/index';
 import DrawerComponent from './drawer/index';
 import {APP_STORE_URL} from '../config';
-import AsyncStorage from '@react-native-async-storage/async-storage';
 import messaging from '@react-native-firebase/messaging';
+import { getAsyncNotifications, setNotification, removeNotification } from './Notifications/actions';
+
 const cover = require('../../assets/icons/cover.png');
 
 
@@ -35,31 +36,6 @@ function CustomDrawerContent(props) {
     </DrawerContentScrollView>
   );
 }
-const setNotification = async (value) => {
-  try {
-    let Jsonvalue = JSON.stringify(value);
-    await AsyncStorage.setItem('Notification', Jsonvalue);
-  } catch (e) {
-    console.log('Error saving value');
-  }
-};
-const getNotification = async () => {
-  try {
-      const notification = await AsyncStorage.getItem('Notification');
-      return notification != null ? JSON.parse(notification) : null;
-    } catch (e) {
-      console.log('Error reading value');
-    }
-};
-const removeNotification = async() =>{
-  try {
-    await AsyncStorage.removeItem('Notification');
-
-  }
-  catch {
-    console.log("Error: Couldn't Remove Item");
-  }
-};
 const Drawer = createDrawerNavigator();
 
 export default class HomeContent extends React.Component {
@@ -77,9 +53,8 @@ export default class HomeContent extends React.Component {
       // );
       this.requestUserPermission();
       messaging().onNotificationOpenedApp(remoteMessage => {
-        navigation.navigate('Novel', {id: remoteMessage.data.id,
-        name: remoteMessage.data.name});
-        setNotification(remoteMessage.data);
+        setNotification(remoteMessage);
+        console.log(remoteMessage);
       });
     }
     requestUserPermission = async() => {
@@ -120,14 +95,14 @@ export default class HomeContent extends React.Component {
               <TouchableOpacity onPress={() => navigation.navigate('Notifications')}>
                   <Icon name="notifications" size={25} style={{marginRight: 10}}/>
               </TouchableOpacity>),
-              headerTitleAlign: 'center', headerTitleStyle: {fontFamily: 'Alvi-Nastaleeq-Regular', fontSize: 28},
+              headerTitleAlign: 'center', headerTitleStyle: {fontFamily: 'Alvi-Regular', fontSize: 28},
               drawerLabel: 'Home', drawerIcon:(tintColor) => {
               return <Icon name="home" color={tintColor} size={20}/>;}}}/>
 
-              <Drawer.Screen name="Authors" component={Authors} options={{title: 'مصنف', headerTitleAlign: 'center', headerTitleStyle: {fontFamily: 'Alvi-Nastaleeq-Regular', fontSize: 28},
+              <Drawer.Screen name="Authors" component={Authors} options={{title: 'مصنف', headerTitleAlign: 'center', headerTitleStyle: {fontFamily: 'Alvi-Regular', fontSize: 28},
               drawerLabel: 'Authors', drawerIcon:(tintColor) => {
               return <Icon name="people" color={tintColor} size={20}/>;}}}/>
-              <Drawer.Screen name="Categories" component={DrawerComponent} options={{title: 'انواع و اقسام', headerTitleAlign: 'center', headerTitleStyle: {fontFamily: 'Alvi-Nastaleeq-Regular', fontSize: 28},
+              <Drawer.Screen name="Categories" component={DrawerComponent} options={{title: 'انواع و اقسام', headerTitleAlign: 'center', headerTitleStyle: {fontFamily: 'Alvi-Regular', fontSize: 28},
               drawerLabel: 'Categories', drawerIcon:(tintColor) => {
               return <Icon name="file-tray" color={tintColor} size={20}/>;}}}/>
             </Drawer.Navigator>

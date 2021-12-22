@@ -10,7 +10,6 @@ import {
 } from 'react-native';
 import { Picker } from '@react-native-picker/picker';
 import Slider from '@react-native-community/slider';
-import Icon from 'react-native-vector-icons/MaterialIcons';
 import { COLOR_PRIMARY } from '../../colors';
 
 export default class Page extends Component {
@@ -71,12 +70,9 @@ export default class Page extends Component {
                 <Picker.Item label="Regular" value="NotoNaskhArabic-Regular" />
                 <Picker.Item label="Bold" value="NotoNaskhArabic-Bold" />
                 <Picker.Item label="AlQalam-Shekastah-Regular" value="AlQalam-Shekastah-Regular"/>
-                <Picker.Item label="AlQalam-Taj-Nastaleeq-Regular" value="AlQalam-Taj-Nastaleeq-Regular"/>
                 <Picker.Item label="AlQalam-Ubaid-Regular" value="AlQalam-Ubaid-Regular"/>
                 <Picker.Item label="Alvi-Regular" value="Alvi-Regular"/>
-                <Picker.Item label="Alvi-Nastaleeq-Regular" value="Alvi-Nastaleeq-Regular"/>
                 <Picker.Item label="Attari-Quran-Regular" value="Attari-Quran-Regular"/>
-                <Picker.Item label="Jameel-Noori-Nastaleeq-Khaseeda" value="Jameel-Noori-Nastaleeq-Kasheeda"/>
                 <Picker.Item label="PDMS-Bukhari-Regular" value="PDMS-Bukhari-Regular"/>
                 <Picker.Item label="PDMS-Jauhar-Regular" value="PDMS-Jauhar-Regular"/>
                 <Picker.Item label="PDMS-Penci-Nafees-Regular" value="PDMS-Penci-Nafees-Regular"/>

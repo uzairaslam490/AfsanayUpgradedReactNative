@@ -13,6 +13,7 @@ import Author from './app/author/index';
 import Category from './app/category/index';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import Notification from './app/home/Notifications';
+import { navigationRef } from './RootNavigation';
 import { APP_STORE_URL } from './app/config';
 const { Screen, Navigator } = createNativeStackNavigator();
 
@@ -86,7 +87,7 @@ export default function App() {
   }, []);
   return (
     <Provider store={store}>
-      <NavigationContainer>
+      <NavigationContainer ref={navigationRef}>
           <Navigator>
               <Screen name="Home" options={{headerShown: false}} component={Home}/>
               <Screen name="Novel" options={{headerTitleAlign: 'center'}} component={Novel} />

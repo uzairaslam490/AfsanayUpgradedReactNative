@@ -49,7 +49,7 @@ const styles = StyleSheet.create({
     borderColor: COLOR_PRIMARY,
   },
   name: {
-    fontFamily: 'Alvi-Nastaleeq-Regular',
+    fontFamily: 'Alvi-Regular',
     fontSize: 28,
     color: COLOR_PRIMARY,
   },

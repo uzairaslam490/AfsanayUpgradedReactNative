@@ -4,11 +4,11 @@ import React, {Component} from 'react';
 import {View, FlatList, RefreshControl, Text, ScrollView, TouchableOpacity} from 'react-native';
 import Icon from 'react-native-vector-icons/Ionicons';
 import { COLOR_PRIMARY } from '../../colors';
-import NotificationItem from './NotificationItem';
 import AsyncStorage from '@react-native-async-storage/async-storage';
+import { setNotifications } from './actions';
+import NotificationItem from './NotificationItem';
 
-
-export default class Notification extends Component {
+export default class Notifications extends Component {
   constructor(props) {
     super(props);
     this.getNotifications = this.getNotifications.bind(this);
@@ -17,31 +17,32 @@ export default class Notification extends Component {
     this.refreshList = this.refreshList.bind(this);
   }
   componentDidMount(){
+    let {isFetched, isFetching, hasMore} = this.props;
+    if (!isFetched) {
     this.getNotifications();
+    }
   }
-  renderItem = (item) => {
+  renderItem (options) {
       let {navigation} = this.props;
-      return (
-        <View>
-          <Text>{item.title}</Text>
-          <Text>{item.message}</Text>
-        </View>
-      );
+      return  <NotificationItem notifications={options.item} navigation={navigation}/>;
   }
   onEndReached() {
     this.getNotifications();
   }
   getNotifications(reset = false){
       let {getNotifications, isFetching, hasMore} = this.props;
-        console.log(isFetching, hasMore);
+        // console.log(isFetching, hasMore);
         getNotifications(reset);
   }
   refreshList(){
       this.getNotifications();
   }
   render() {
-      let {notifications, isFetching} = this.props;
-      console.warn(notifications);
+      let {notifications, isFetching,isFetched, hasMore} = this.props;
+      console.log(isFetched, isFetching,hasMore);
+      console.log(notifications);
+      let Notification = notifications.map(item => {return item.data;});
+      // console.log(Notification);
       // if (isFetching){
       //   return (
       //     <View>
@@ -51,25 +52,25 @@ export default class Notification extends Component {
       //   );
       // } else {
     return (
-      // <FlatList
-      //   data={notifications}
-      //   renderItem={this.renderItem}
-      //   keyExtractor={item => item.id}
-      //   onEndReached={this.onEndReached}
-      //   onEndReachedThreshold={0.5}
-      //   refreshing={isFetching}
-      //   refreshControl={
-      //     <RefreshControl
-      //       refreshing={isFetching}
-      //       onRefresh={this.refreshList}
-      //       colors={[COLOR_PRIMARY]}
-      //       size={'large'}
-      //     />
-      //   }
-      // />
-      <View>
-        <Text style={{textAlign: 'center', fontSize: 30}}>Hello World</Text>
-      </View>
+      <FlatList
+        data={Notification}
+        renderItem={this.renderItem}
+        keyExtractor={item => item.id}
+        // onEndReached={this.onEndReached}
+        // onEndReachedThreshold={0.5}
+        // refreshing={isFetching}
+        // refreshControl={
+        //   <RefreshControl
+        //     refreshing={isFetching}
+        //     onRefresh={this.refreshList}
+        //     colors={[COLOR_PRIMARY]}
+        //     size={'large'}
+        //   />
+        // }
+      />
+      // <View>
+      //   {notifications.map(item => <Text>{item.data.title}</Text>)}
+      // </View>
     );
   }
 }
